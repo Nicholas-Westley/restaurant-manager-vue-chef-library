@@ -1,14 +1,14 @@
 {
     "name": "restaurant-manager-vue-chef-library",
     "main": "./dist/restaurant-manager-vue-chef-library.common.js",
-    "version": "0.1.0",
-    "private": true,
+    "version": "0.1.2",
+    "private": false,
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
         "watch": "npm run serve --watch",
-        "build-library": "vue-cli-service build --target lib --name restaurant-manager-vue-order-library",
+        "build-library": "vue-cli-service build --target lib --name restaurant-manager-vue-chef-library",
         "build-bump-publish": "npm run build-library && npm version patch && npm publish --access public",
         "build-publish": "npm run build-library && npm publish --access public"
     },
@@ -53,5 +53,8 @@
         "> 1%",
         "last 2 versions",
         "not ie <= 8"
+    ],
+    "files": [
+        "dist/*"
     ]
 }
