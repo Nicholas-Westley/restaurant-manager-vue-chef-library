@@ -1,14 +1,16 @@
 import Vue from 'vue';
 import App from './App.vue';
 import './plugins/vuetify';
+import './axios';
 window._ = require('lodash');
-Vue.config.productionTip = false
-
-
-const axios = require('axios');
-axios.defaults.baseURL = 'http://food-order-tracker.development/api/';
-Vue.prototype.axios = axios;
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app');
+    el: '#app',
+    components: { App },
+    template: `
+        <v-app id="app">
+            <App/>
+        </v-app>
+    `,
+});
